@@ -35,9 +35,60 @@
     echo $phrase2[8];
     // $phrase2[2] = "X";
     echo "<hr>";
-    echo str_replace("Giraffe", "Panda", $phrase2)
+    echo str_replace("Giraffe", "Panda", $phrase2);
+    echo "<br>";
+    echo substr($phrase2, 8, 3);
+    echo "<hr>";
 
+    echo 40;
+    echo -40.85;
+    echo 9 + 5;
+    echo 12 / 2;
+    echo 3 * 4;
+    echo "<br>";
+    $num = 10;
+    $num--;
+    echo $num;
+
+    echo "<br> <hr> Form In PHP <hr>"
+
+        ?>
+    <form action="site.php" method="get">
+        Name: <input type="text" name="name">
+        <input type="submit">
+
+    </form>
+    <br>
+    <?php
+    echo $_GET["name"];
+    echo "<hr>";
     ?>
+
+    <form action="site.php" method="post">
+        Apples: <input type="checkbox" value="apples" name="fruits[]"><br>
+        Oranges: <input type="checkbox" value="oranges" name="fruits[]"><br>
+        Pineapples: <input type="checkbox" value="pineapples" name="fruits[]"><br>
+        Strawberries: <input type="checkbox" value="Strawberries" name="fruits[]"><br>
+        <input type="submit">
+    </form>
+    <?php
+
+    $fruits = $_POST["fruits"];
+    echo $fruits[0];
+    echo "<hr>";
+    ?>
+
+    <form action="site.php" method="post">
+        Student: <input type="text" name="student"><br>
+        <input type="submit">
+    </form>
+
+    <?php
+    $grades = array ("Pratt" => "S+", "Moisés" => "A+", "Rodrigo" => "B+");
+    echo $grades[$_POST["student"]];
+    ?>
+
+
 </body>
 
 </html>
